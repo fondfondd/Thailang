@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:design="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    app:ignore="NamespaceTypo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="#cca28b"
+            android:minHeight="?attr/actionBarSize"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Setting"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="#101010" />
+
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:background="@drawable/border_trans">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="65dp"
+            android:text="          Gender"
+            android:textSize="18sp"
+            android:gravity="center_vertical"/>
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="Male" />
+        <RadioButton
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="Famale"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5dp" />
+
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:background="@drawable/border_trans">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="65dp"
+            android:text="          Sound"
+            android:textSize="18sp"
+            android:gravity="center_vertical"/>
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="378dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="#CCA28B">
+
+        <Button
+            android:id="@+id/homeBt"
+            android:layout_width="76dp"
+            android:layout_height="match_parent"
+            android:text="Home"
+            android:textSize="10dp"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/searchBt"
+            android:layout_width="76dp"
+            android:layout_height="match_parent"
+            android:text="Search"
+            android:textSize="10dp"
+            android:background="@android:color/transparent"/>
+
+        <Button
+            android:id="@+id/favBt"
+            android:layout_width="76dp"
+            android:layout_height="match_parent"
+            android:text="Favorite"
+            android:textSize="10dp"
+            android:background="@android:color/transparent"/>
+
+        <Button
+            android:id="@+id/histrBt"
+            android:layout_width="76dp"
+            android:layout_height="match_parent"
+            android:text="History"
+            android:textSize="10dp"
+            android:background="@android:color/transparent"/>
+
+        <Button
+            android:id="@+id/settBt"
+            android:layout_width="76dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Setting"
+            android:textSize="10dp"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:design="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    app:ignore="NamespaceTypo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:background="#cca28b"
+            android:minHeight="?attr/actionBarSize"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Learning"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="#101010" />
+
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <Button
+        android:id="@+id/soundBt"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:text="Sound"
+        android:layout_gravity="center"
+        android:background="@drawable/border"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="385dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:background="@android:color/transparent">
+
+        <Button
+            android:id="@+id/ordinaryTone"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Ordinary Tone"
+            android:background="@drawable/border"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <Button
+            android:id="@+id/lowTone"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Low Tone"
+            android:background="@drawable/border"/>
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5dp" />
+
+        <Button
+            android:id="@+id/fallinTone"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Falling Tone"
+            android:background="@drawable/border"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <Button
+            android:id="@+id/highTone"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="High Tone"
+            android:background="@drawable/border"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <Button
+            android:id="@+id/risingTone"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Rising Tone"
+            android:background="@drawable/border"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="#CCA28B">
+
+        <Button
+            android:id="@+id/homeBt"
+            android:layout_width="79dp"
+            android:layout_height="match_parent"
+            android:text="Home"
+            android:textSize="10dp"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/searchBt"
+            android:layout_width="76dp"
+            android:layout_height="match_parent"
+            android:text="Search"
+            android:textSize="10dp"
+            android:background="@android:color/transparent"/>
+
+        <Button
+            android:id="@+id/favBt"
+            android:layout_width="76dp"
+            android:layout_height="match_parent"
+            android:text="Favorite"
+            android:textSize="10dp"
+            android:background="@android:color/transparent"/>
+
+        <Button
+            android:id="@+id/histrBt"
+            android:layout_width="76dp"
+            android:layout_height="match_parent"
+            android:text="History"
+            android:textSize="10dp"
+            android:background="@android:color/transparent"/>
+
+        <Button
+            android:id="@+id/settBt"
+            android:layout_width="76dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Setting"
+            android:textSize="10dp"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+
+
+</android.support.v7.widget.LinearLayoutCompat>
