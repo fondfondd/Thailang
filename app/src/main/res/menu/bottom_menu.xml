@@ -2,16 +2,16 @@
     <item
         android:id="@+id/menu_home"
         android:title="@string/menu_home"
-        android:icon="@drawable/homeIcon"
+        android:icon="@drawable/homeicon"
         />
     <item
         android:id="@+id/menu_search"
         android:title="@string/menu_home"
-        android:icon="@drawable/homeIcon"
+        android:icon="@drawable/homeicon"
         />
 
     <item
         android:id="@+id/menu_notifications"
         android:title="@string/menu_home"
-        android:icon="@drawable/homeIcon" />
+        android:icon="@drawable/homeicon" />
 </menu>

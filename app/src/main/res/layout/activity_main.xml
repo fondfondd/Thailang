@@ -84,13 +84,13 @@
         android:layout_height="112dp"
         />
 
-    <android.support.design.widget.BottomNavigationView
+    <!--<android.support.design.widget.BottomNavigationView
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         design:menu="@menu/bottom_menu">
-    </android.support.design.widget.BottomNavigationView>
+    </android.support.design.widget.BottomNavigationView>-->
 
 
 </android.support.v7.widget.LinearLayoutCompat>

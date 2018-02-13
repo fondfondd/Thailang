@@ -50,91 +50,10 @@
 
     </LinearLayout>
 
-    <TextView
+    <ListView
+        android:id="@+id/main_listview"
         android:layout_width="match_parent"
-        android:layout_height="10dp" />
-
-    <Button
-        android:id="@+id/word1"
-        android:layout_width="400dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:text="Word1"
-        android:textSize="14sp"
-        android:gravity="center"
-        android:background="@drawable/border"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="5dp" />
-    <Button
-        android:id="@+id/word2"
-        android:layout_width="400dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:text="Word2"
-        android:background="@drawable/border"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="5dp" />
-    <Button
-        android:id="@+id/word3"
-        android:layout_width="400dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:text="Word3"
-        android:background="@drawable/border"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="5dp" />
-    <Button
-        android:id="@+id/word4"
-        android:layout_width="400dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:text="Word4"
-        android:background="@drawable/border"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="5dp" />
-    <Button
-        android:id="@+id/word5"
-        android:layout_width="400dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:text="Word5"
-        android:background="@drawable/border"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="5dp" />
-    <Button
-        android:id="@+id/word6"
-        android:layout_width="400dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:text="Word6"
-        android:background="@drawable/border"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="5dp" />
-    <Button
-        android:id="@+id/word7"
-        android:layout_width="400dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:text="Word7"
-        android:background="@drawable/border"/>
-
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="10dp" />
+        android:layout_height="match_parent" />
 
     <LinearLayout
         android:layout_width="match_parent"
