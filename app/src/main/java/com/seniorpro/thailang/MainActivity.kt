@@ -87,6 +87,7 @@ class MainActivity : AppCompatActivity() {
     private fun requestPermission() {
 
         ActivityCompat.requestPermissions(this@MainActivity, arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.RECORD_AUDIO), RequestPermissionCode)
+        ActivityCompat.requestPermissions(this@MainActivity, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.RECORD_AUDIO), RequestPermissionCode)
 
     }
 

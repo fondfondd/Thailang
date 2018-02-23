@@ -4,6 +4,7 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+
 android {
     compileSdkVersion 26
     buildToolsVersion '26.0.2'
@@ -22,8 +23,9 @@ android {
         }
     }
 }
-
 dependencies {
+    compile 'com.github.adrielcafe:AndroidAudioConverter:0.0.8'
+    compile 'com.github.adrielcafe:ffmpeg-android-java:2a627f6ecd@aar'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
@@ -34,3 +36,12 @@ dependencies {
     })
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 }
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+
