@@ -5,7 +5,8 @@
     xmlns:design="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/tools"
     android:orientation="vertical"
-    app:ignore="NamespaceTypo">
+    app:ignore="NamespaceTypo"
+    android:background="#FFE0D6D7">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +17,7 @@
             android:id="@+id/toolBar"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:background="#cca28b"
+            android:background="#f1493b"
             android:minHeight="?attr/actionBarSize"
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
@@ -26,7 +27,8 @@
                 android:text="Search"
                 android:gravity="center"
                 android:textSize="20sp"
-                android:textColor="#101010" />
+                android:textColor="#ddded7"
+                android:textStyle="bold"/>
 
         </android.support.v7.widget.Toolbar>
     </LinearLayout>
@@ -54,81 +56,71 @@
         android:layout_width="match_parent"
         android:layout_height="10dp" />
 
-    <Button
-        android:id="@+id/searchWord1"
-        android:layout_width="400dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:text="Word1"
-        android:textSize="14sp"
-        android:gravity="center"
-        android:background="@drawable/border"/>
-
-    <TextView
+    <ListView
         android:layout_width="match_parent"
-        android:layout_height="5dp" />
-    <Button
-        android:id="@+id/searchWord2"
-        android:layout_width="400dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:text="Word2"
-        android:background="@drawable/border"/>
+        android:layout_height="470dp"></ListView>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="335dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:background="#CCA28B">
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:background="#f1493b">
 
-        <Button
-            android:id="@+id/homeBt"
-            android:layout_width="76dp"
-            android:layout_height="match_parent"
-            android:text="Home"
-            android:textSize="10dp"
-            android:background="@android:color/transparent" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
 
-        <Button
-            android:id="@+id/searchBt"
-            android:layout_width="76dp"
-            android:layout_height="match_parent"
-            android:text="Search"
-            android:textSize="10dp"
-            android:background="@android:color/transparent"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center">
 
-        <Button
-            android:id="@+id/favBt"
-            android:layout_width="76dp"
-            android:layout_height="match_parent"
-            android:text="Favorite"
-            android:textSize="10dp"
-            android:background="@android:color/transparent"/>
+            <Button
+                android:id="@+id/homeBt"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/home" />
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
 
-        <Button
-            android:id="@+id/histrBt"
-            android:layout_width="76dp"
-            android:layout_height="match_parent"
-            android:text="History"
-            android:textSize="10dp"
-            android:background="@android:color/transparent"/>
+            <Button
+                android:id="@+id/searchBt"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/search"/>
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
 
-        <Button
-            android:id="@+id/settBt"
-            android:layout_width="76dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="Setting"
-            android:textSize="10dp"
-            android:background="@android:color/transparent"/>
+            <Button
+                android:id="@+id/favBt"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/fav"/>
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/histrBt"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/history"/>
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/settBt"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/settings"/>
+        </LinearLayout>
     </LinearLayout>
-
 
 </LinearLayout>
 

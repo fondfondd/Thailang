@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:design="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/tools"
     android:orientation="vertical"
-    app:ignore="NamespaceTypo">
+    app:ignore="NamespaceTypo"
+    android:background="#FFE0D6D7">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,81 +17,126 @@
             android:id="@+id/toolBar"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:background="#cca28b"
+            android:background="#f1493b"
             android:minHeight="?attr/actionBarSize"
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="LEARN THAI"
+                android:text="Learn Thai"
+                android:textStyle="bold"
                 android:gravity="center"
                 android:textSize="20sp"
-                android:textColor="#101010" />
+                android:textColor="#ddded7" />
 
         </android.support.v7.widget.Toolbar>
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="20dp" />
+        android:layout_height="10dp" />
+
+    <Button
+        android:id="@+id/easychap"
+        android:layout_width="350dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:textColor="#584044"
+        android:background="@drawable/easy1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5dp" />
+
+    <Button
+        android:id="@+id/mediumchap"
+        android:layout_width="350dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:textColor="#584044"
+        android:background="@drawable/med1"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5dp" />
+
+    <Button
+        android:id="@+id/hardchap"
+        android:layout_width="350dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:textColor="#584044"
+        android:background="@drawable/hard2"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="135dp" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="405dp"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/learnbt"
-            android:layout_width="356dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:background="@drawable/border"
-            android:text="LEARNING" />
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:background="#f1493b">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="5dp" />
+            android:layout_height="12dp" />
 
-
-        <Button
-            android:id="@+id/practbt"
-            android:layout_width="356dp"
-            android:layout_height="164dp"
-            android:layout_gravity="center"
-            android:background="@drawable/border"
-            android:text="PRACTICE"
-            android:visibility="visible" />
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="5dp" />
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center">
 
-        <Button
-            android:id="@+id/testbt"
-            android:layout_width="356dp"
-            android:layout_height="130dp"
-            android:layout_gravity="center"
-            android:background="@drawable/border"
-            android:text="TEST"
-            android:visibility="visible" />
+            <Button
+                android:id="@+id/homeBt"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/home" />
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
 
+            <Button
+                android:id="@+id/searchBt"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/search"/>
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
 
+            <Button
+                android:id="@+id/favBt"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/fav"/>
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/histrBt"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/history"/>
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/settBt"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/settings"/>
+        </LinearLayout>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="112dp"
-        />
 
-    <!--<android.support.design.widget.BottomNavigationView
-        android:id="@+id/bottomNav"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        design:menu="@menu/bottom_menu">
-    </android.support.design.widget.BottomNavigationView>-->
+</LinearLayout>
 
 
-</android.support.v7.widget.LinearLayoutCompat>

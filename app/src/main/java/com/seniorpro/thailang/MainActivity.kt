@@ -35,50 +35,48 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-         val learnbutton = findViewById<Button>(R.id.learnbt)
-        learnbutton.setOnClickListener{
-            intent = Intent(this,Learn_main::class.java)
+         val easybutton = findViewById<Button>(R.id.easychap)
+        easybutton.setOnClickListener{
+            intent = Intent(this,prac_group::class.java)
             startActivity(intent)
         }
 
-        val pracbutton = findViewById<Button>(R.id.practbt)
-        pracbutton.setOnClickListener{
-            intent = Intent(this,Prac_main::class.java)
+        val medbutton = findViewById<Button>(R.id.mediumchap)
+        medbutton.setOnClickListener{
+            intent = Intent(this,prac_group::class.java)
             startActivity(intent)
         }
 
-        val testbutton = findViewById<Button>(R.id.testbt)
-        testbutton.setOnClickListener{
-            intent = Intent(this,Test_main::class.java)
+        val hardbutton = findViewById<Button>(R.id.hardchap)
+        hardbutton.setOnClickListener{
+            intent = Intent(this,prac_group::class.java)
             startActivity(intent)
         }
 
-        /*val SearchButton = findViewById<Button>(R.id.searchBt)
+        val SearchButton = findViewById<Button>(R.id.searchBt)
         SearchButton.setOnClickListener{
             intent = Intent(this,Search_main::class.java)
             startActivity(intent)
-        }*/
+        }
 
-        /*val FavButton = findViewById<Button>(R.id.favBt)
+        val FavButton = findViewById<Button>(R.id.favBt)
         FavButton.setOnClickListener{
             intent = Intent(this,Favor_main::class.java)
             startActivity(intent)
-        }*/
+        }
 
-       /* val HistoryButton = findViewById<Button>(R.id.histrBt)
+        val HistoryButton = findViewById<Button>(R.id.histrBt)
         HistoryButton.setOnClickListener{
             intent = Intent(this,History_main::class.java)
             startActivity(intent)
-        }*/
+        }
 
-        /*val SettingButton = findViewById<Button>(R.id.settBt)
+        val SettingButton = findViewById<Button>(R.id.settBt)
         SettingButton.setOnClickListener{
             intent = Intent(this,Setting_main::class.java)
             startActivity(intent)
-        }*/
+        }
 
-        /*val toolbar = findViewById<Toolbar>(R.id.toolBar)
-        setSupportActionBar(toolbar)*/
 //        supportActionBar!!.setDisplayShowTitleEnabled(false)
 
 

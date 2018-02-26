@@ -5,7 +5,8 @@
     xmlns:design="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/tools"
     android:orientation="vertical"
-    app:ignore="NamespaceTypo">
+    app:ignore="NamespaceTypo"
+    android:background="#FFE0D6D7">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,19 +17,21 @@
             android:id="@+id/toolBar"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:background="#cca28b"
+            android:background="#f1493b"
             android:minHeight="?attr/actionBarSize"
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Vocabulary"
+                android:text="Word"
+                android:textStyle="bold"
                 android:gravity="center"
                 android:textSize="20sp"
-                android:textColor="#101010" />
+                android:textColor="#c3c7b2" />
 
         </android.support.v7.widget.Toolbar>
+
     </LinearLayout>
 
     <LinearLayout
@@ -138,9 +141,9 @@
 
     <LinearLayout
         android:layout_width="375dp"
-        android:layout_height="270dp"
+        android:layout_height="265dp"
         android:layout_gravity="center"
-        android:background="@drawable/border_noborder"
+        android:background="@drawable/border"
         android:orientation="vertical">
 
         <TextView
@@ -151,6 +154,8 @@
             android:background="@drawable/border_trans"
             android:gravity="center"
             android:text="Result"
+            android:textStyle="bold"
+            android:textColor="#584044"
             android:textSize="15sp" />
 
         <WebView
@@ -166,7 +171,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Percentage:"
-            android:textColor="@android:color/black"
+            android:textColor="#584044"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -175,54 +180,64 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_gravity="center"
-        android:background="#CCA28B"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:background="#f1493b">
 
-        <Button
-            android:id="@+id/homeBt"
-            android:layout_width="76dp"
-            android:layout_height="match_parent"
-            android:background="@android:color/transparent"
-            android:text="Home"
-            android:textSize="10dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
 
-        <Button
-            android:id="@+id/searchBt"
-            android:layout_width="78dp"
-            android:layout_height="match_parent"
-            android:background="@android:color/transparent"
-            android:text="Search"
-            android:textSize="10dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center">
 
-        <Button
-            android:id="@+id/favBt"
-            android:layout_width="76dp"
-            android:layout_height="match_parent"
-            android:background="@android:color/transparent"
-            android:text="Favorite"
-            android:textSize="10dp" />
+            <Button
+                android:id="@+id/homeBt"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/home" />
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
 
-        <Button
-            android:id="@+id/histrBt"
-            android:layout_width="76dp"
-            android:layout_height="match_parent"
-            android:background="@android:color/transparent"
-            android:text="History"
-            android:textSize="10dp" />
+            <Button
+                android:id="@+id/searchBt"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/search"/>
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
 
-        <Button
-            android:id="@+id/settBt"
-            android:layout_width="76dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:text="Setting"
-            android:textSize="10dp" />
+            <Button
+                android:id="@+id/favBt"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/fav"/>
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/histrBt"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/history"/>
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/settBt"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/settings"/>
+        </LinearLayout>
     </LinearLayout>
-
 
 
 
