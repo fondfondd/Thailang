@@ -39,12 +39,12 @@
 
     <Button
         android:id="@+id/easychap"
-        android:layout_width="350dp"
+        android:layout_width="380dp"
         android:layout_height="130dp"
         android:layout_gravity="center"
         android:textSize="30sp"
         android:textColor="#584044"
-        android:background="@drawable/easy1"/>
+        android:background="@drawable/easy"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -52,24 +52,24 @@
 
     <Button
         android:id="@+id/mediumchap"
-        android:layout_width="350dp"
+        android:layout_width="380dp"
         android:layout_height="130dp"
         android:layout_gravity="center"
         android:textSize="30sp"
         android:textColor="#584044"
-        android:background="@drawable/med1"/>
+        android:background="@drawable/midium"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="5dp" />
 
     <Button
         android:id="@+id/hardchap"
-        android:layout_width="350dp"
+        android:layout_width="380dp"
         android:layout_height="130dp"
         android:layout_gravity="center"
         android:textSize="30sp"
         android:textColor="#584044"
-        android:background="@drawable/hard2"/>
+        android:background="@drawable/hard"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="135dp" />
