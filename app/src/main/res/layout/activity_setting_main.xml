@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:design="http://schemas.android.com/apk/res-auto"
@@ -11,98 +11,129 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        design:layout_constraintEnd_toEndOf="parent"
+        design:layout_constraintStart_toStartOf="parent"
+        design:layout_constraintTop_toTopOf="parent">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolBar"
-            android:layout_height="match_parent"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:background="#f1493b"
-            android:minHeight="?attr/actionBarSize"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f1493b"
+                android:minHeight="?attr/actionBarSize"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Setting"
+                    android:textColor="#ddded7"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </android.support.v7.widget.Toolbar>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <LinearLayout
+            android:layout_width="390dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:background="@drawable/border_trans"
+            android:orientation="horizontal">
 
             <TextView
+                android:layout_width="150dp"
+                android:layout_height="65dp"
+                android:gravity="center_vertical"
+                android:text="          Gender"
+                android:textColor="#584044"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/rdogroup"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Setting"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:textColor="#ddded7" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-        </android.support.v7.widget.Toolbar>
-    </LinearLayout>
+                <RadioButton
+                    android:id="@+id/rdobtMale"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:text="Male"
+                    android:checked="true"
+                    android:textColor="#584044"
+                    android:textSize="16sp"
+                    android:onClick="onRadioButtonClicked"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="20dp" />
+                <RadioButton
+                    android:id="@+id/rdobtFemale"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:text="Famale"
+                    android:textColor="#584044"
+                    android:checked="false"
+                    android:textSize="16sp"
+                    android:onClick="onRadioButtonClicked"/>
 
-    <LinearLayout
-        android:layout_width="390dp"
-        android:layout_height="65dp"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:background="@drawable/border_trans">
+            </RadioGroup>
 
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="65dp"
-            android:text="          Gender"
-            android:textSize="18sp"
-            android:gravity="center_vertical"
-            android:textColor="#584044"/>
 
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:text="Male"
-            android:textColor="#584044"/>
-        <RadioButton
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:text="Famale"
-            android:textColor="#584044"/>
 
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="5dp" />
-
-    <LinearLayout
-        android:layout_width="390dp"
-        android:layout_height="65dp"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:background="@drawable/border_trans">
+        </LinearLayout>
 
         <TextView
-            android:layout_width="150dp"
-            android:layout_height="65dp"
-            android:text="          Sound"
-            android:textSize="18sp"
-            android:gravity="center_vertical"
-            android:textColor="#584044"/>
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
 
-        <SeekBar
-            android:id="@+id/seekBar"
-            android:layout_width="210dp"
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:layout_width="390dp"
+            android:layout_height="65dp"
             android:layout_gravity="center"
-            />
+            android:background="@drawable/border_trans"
+            android:orientation="horizontal">
 
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="65dp"
+                android:gravity="center_vertical"
+                android:text="          Sound"
+                android:textColor="#584044"
+                android:textSize="18sp" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
     </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="388dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="#f1493b"
         android:orientation="vertical"
-        android:background="#f1493b">
+        design:layout_constraintBottom_toBottomOf="parent"
+        design:layout_constraintEnd_toEndOf="parent"
+        design:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:layout_width="match_parent"
@@ -111,15 +142,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:orientation="horizontal"
+            android:layout_gravity="center"
             android:gravity="center"
-            android:layout_gravity="center">
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/homeBt"
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/home" />
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="match_parent" />
@@ -128,7 +160,8 @@
                 android:id="@+id/searchBt"
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/search"/>
+                android:background="@drawable/search" />
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="match_parent" />
@@ -137,7 +170,8 @@
                 android:id="@+id/favBt"
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/fav"/>
+                android:background="@drawable/fav" />
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="match_parent" />
@@ -146,7 +180,8 @@
                 android:id="@+id/histrBt"
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/history"/>
+                android:background="@drawable/history" />
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="match_parent" />
@@ -155,8 +190,8 @@
                 android:id="@+id/settBt"
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/settings"/>
+                android:background="@drawable/settings" />
         </LinearLayout>
     </LinearLayout>
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

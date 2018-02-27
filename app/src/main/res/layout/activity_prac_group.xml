@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:design="http://schemas.android.com/apk/res-auto"
@@ -11,56 +11,79 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        design:layout_constraintEnd_toEndOf="parent"
+        design:layout_constraintStart_toStartOf="parent"
+        design:layout_constraintTop_toTopOf="parent">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolBar"
-            android:layout_height="match_parent"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:background="#f1493b"
-            android:minHeight="?attr/actionBarSize"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <TextView
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolBar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Group"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:textColor="#ddded7" />
-        </android.support.v7.widget.Toolbar>
-    </LinearLayout>
+                android:layout_height="match_parent"
+                android:background="#f1493b"
+                android:minHeight="?attr/actionBarSize"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="2dp" />
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@drawable/border_trans">
+                <TextView
+                    android:id="@+id/groupWord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Group"
+                    android:textColor="#ddded7"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:ignore="InvalidId" />
+            </android.support.v7.widget.Toolbar>
+        </LinearLayout>
 
         <TextView
-            android:layout_width="350dp"
-            android:layout_height="60dp" />
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
 
-        <SearchView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/border_trans"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="60dp" />
+
+            <SearchView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/main_listview"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/main_listview"
-        android:layout_width="match_parent"
-        android:layout_height="482dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="#f1493b"
         android:orientation="vertical"
-        android:background="#f1493b">
+        design:layout_constraintBottom_toBottomOf="parent"
+        design:layout_constraintEnd_toEndOf="parent"
+        design:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:layout_width="match_parent"
@@ -69,15 +92,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:orientation="horizontal"
+            android:layout_gravity="center"
             android:gravity="center"
-            android:layout_gravity="center">
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/homeBt"
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/home" />
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="match_parent" />
@@ -86,7 +110,8 @@
                 android:id="@+id/searchBt"
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/search"/>
+                android:background="@drawable/search" />
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="match_parent" />
@@ -95,7 +120,8 @@
                 android:id="@+id/favBt"
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/fav"/>
+                android:background="@drawable/fav" />
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="match_parent" />
@@ -104,7 +130,8 @@
                 android:id="@+id/histrBt"
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/history"/>
+                android:background="@drawable/history" />
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="match_parent" />
@@ -113,9 +140,9 @@
                 android:id="@+id/settBt"
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/settings"/>
+                android:background="@drawable/settings" />
         </LinearLayout>
     </LinearLayout>
 
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

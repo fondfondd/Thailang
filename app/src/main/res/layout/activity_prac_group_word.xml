@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:design="http://schemas.android.com/apk/res-auto"
@@ -11,178 +11,195 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        design:layout_constraintEnd_toEndOf="parent"
+        design:layout_constraintStart_toStartOf="parent"
+        design:layout_constraintTop_toTopOf="parent">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolBar"
-            android:layout_height="match_parent"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:background="#f1493b"
-            android:minHeight="?attr/actionBarSize"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f1493b"
+                android:minHeight="?attr/actionBarSize"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Word"
+                    android:textColor="#c3c7b2"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </android.support.v7.widget.Toolbar>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="375dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_trans"
+            android:orientation="vertical">
 
             <TextView
+                android:id="@+id/thai"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Word"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:textColor="#c3c7b2" />
+                android:layout_height="70dp"
+                android:layout_marginRight="30dp"
+                android:gravity="right|center"
+                android:text="กา"
+                android:textSize="24sp" />
 
-        </android.support.v7.widget.Toolbar>
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_margin="30dp"
+                android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="375dp"
-        android:layout_height="180dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/border_trans"
-        android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/playBtn"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:adjustViewBounds="true"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/play1"
+                    design:srcCompat="@drawable/play1" />
 
-        <TextView
-            android:id="@+id/thai"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginRight="30dp"
-            android:gravity="right|center"
-            android:text="กา"
-            android:textSize="24sp" />
+                <TextView
+                    android:id="@+id/eng"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center"
+                    android:text="/ka/" />
+            </LinearLayout>
 
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_margin="30dp"
+            android:layout_margin="10dp"
             android:orientation="horizontal">
 
+            <TextView
+                android:id="@+id/tone1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/tone2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2" />
+
+            <TextView
+                android:id="@+id/tone3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="3" />
+
+            <TextView
+                android:id="@+id/tone4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="4" />
+
+            <TextView
+                android:id="@+id/tone5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="5" />
+
             <ImageButton
-                android:id="@+id/playBtn"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:id="@+id/recordBtn"
+                android:layout_width="0dp"
+                android:layout_height="68dp"
+                android:layout_gravity="right"
+                android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:backgroundTint="@color/colorPrimary"
                 android:scaleType="centerInside"
-                app:srcCompat="@drawable/play1"
-                design:srcCompat="@drawable/play1" />
-
-            <TextView
-                android:id="@+id/eng"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="right|center"
-                android:text="/ka/" />
+                app:srcCompat="@drawable/record"
+                design:srcCompat="@drawable/record" />
         </LinearLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_margin="10dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/tone1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="1" />
-
-        <TextView
-            android:id="@+id/tone2"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="2" />
-
-        <TextView
-            android:id="@+id/tone3"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="3" />
-
-        <TextView
-            android:id="@+id/tone4"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="4" />
-
-        <TextView
-            android:id="@+id/tone5"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="5" />
-
-        <ImageButton
-            android:id="@+id/recordBtn"
-            android:layout_width="0dp"
-            android:layout_height="68dp"
-            android:layout_gravity="right"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:backgroundTint="@color/colorPrimary"
-            android:scaleType="centerInside"
-            app:srcCompat="@drawable/record"
-            design:srcCompat="@drawable/record" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="375dp"
-        android:layout_height="265dp"
-        android:layout_gravity="center"
-        android:background="@drawable/border"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/resultText"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
+        <LinearLayout
+            android:layout_width="375dp"
+            android:layout_height="265dp"
             android:layout_gravity="center"
-            android:background="@drawable/border_trans"
-            android:gravity="center"
-            android:text="Result"
-            android:textStyle="b"
-            android:textColor="#584044"
-            android:textSize="15sp" />
+            android:background="@drawable/border"
+            android:orientation="vertical">
 
-        <WebView
-            android:id="@+id/webView_1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/resultText"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/border_trans"
+                android:gravity="center"
+                android:text="Result"
+                android:textColor="#584044"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        </WebView>
+            <WebView
+                android:id="@+id/webView_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/percen"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Percentage:"
-            android:textColor="#584044"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            </WebView>
 
+            <TextView
+                android:id="@+id/percen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Percentage:"
+                android:textColor="#584044"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="#f1493b"
         android:orientation="vertical"
-        android:background="#f1493b">
+        design:layout_constraintBottom_toBottomOf="parent"
+        design:layout_constraintEnd_toEndOf="parent"
+        design:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:layout_width="match_parent"
@@ -191,15 +208,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:orientation="horizontal"
+            android:layout_gravity="center"
             android:gravity="center"
-            android:layout_gravity="center">
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/homeBt"
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/home" />
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="match_parent" />
@@ -208,7 +226,8 @@
                 android:id="@+id/searchBt"
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/search"/>
+                android:background="@drawable/search" />
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="match_parent" />
@@ -217,7 +236,8 @@
                 android:id="@+id/favBt"
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/fav"/>
+                android:background="@drawable/fav" />
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="match_parent" />
@@ -226,7 +246,8 @@
                 android:id="@+id/histrBt"
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/history"/>
+                android:background="@drawable/history" />
+
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="match_parent" />
@@ -235,10 +256,10 @@
                 android:id="@+id/settBt"
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/settings"/>
+                android:background="@drawable/settings" />
         </LinearLayout>
     </LinearLayout>
 
 
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

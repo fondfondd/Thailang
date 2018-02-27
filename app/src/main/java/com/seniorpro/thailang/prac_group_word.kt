@@ -1,5 +1,6 @@
 package com.seniorpro.thailang
 
+import android.content.Intent
 import android.media.AudioFormat
 import android.media.MediaPlayer
 import android.media.MediaRecorder
@@ -17,6 +18,7 @@ import android.os.CountDownTimer
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_prac_group_word.*
 import android.media.AudioRecord
+import android.widget.Button
 import cafe.adriel.androidaudioconverter.AndroidAudioConverter;
 import cafe.adriel.androidaudioconverter.callback.IConvertCallback;
 import cafe.adriel.androidaudioconverter.callback.ILoadCallback
@@ -32,6 +34,8 @@ val SAMPLE_RATE = 44100
 
 
 private var outputFile: String? = null
+private var gender = "_male"
+
 
 class prac_group_word : AppCompatActivity() {
     var master: MediaPlayer? = null
@@ -55,6 +59,36 @@ class prac_group_word : AppCompatActivity() {
         thaiWord = extras.getString("thaiWord")
         idWord = extras.getString("idWord")
 
+        val HomeButton = findViewById<Button>(R.id.homeBt)
+        HomeButton.setOnClickListener{
+            intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        val SearchButton = findViewById<Button>(R.id.searchBt)
+        SearchButton.setOnClickListener{
+            intent = Intent(this,Search_main::class.java)
+            startActivity(intent)
+        }
+
+        val FavButton = findViewById<Button>(R.id.favBt)
+        FavButton.setOnClickListener{
+            intent = Intent(this,Favor_main::class.java)
+            startActivity(intent)
+        }
+
+        val HistoryButton = findViewById<Button>(R.id.histrBt)
+        HistoryButton.setOnClickListener{
+            intent = Intent(this,History_main::class.java)
+            startActivity(intent)
+        }
+
+        val SettingButton = findViewById<Button>(R.id.settBt)
+        SettingButton.setOnClickListener{
+            intent = Intent(this,Setting_main::class.java)
+            startActivity(intent)
+        }
+
         AndroidAudioConverter.load(this, object : ILoadCallback {
             override fun onSuccess() {
                 // Great!
@@ -68,7 +102,8 @@ class prac_group_word : AppCompatActivity() {
             }
         })
 
-        words = idWord + "_male"
+        Log.d("gender_____", gender)
+        words = idWord + gender
         thai.setText(thaiWord)
         eng.setText(word)
 
@@ -110,6 +145,10 @@ class prac_group_word : AppCompatActivity() {
                     Toast.LENGTH_LONG).show()
 
         }*/
+    }
+
+    fun setterGender(gen: String){
+        gender = gen
     }
 
     fun convertAudio() {
