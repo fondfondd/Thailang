@@ -38,18 +38,21 @@ class MainActivity : AppCompatActivity() {
          val easybutton = findViewById<Button>(R.id.easychap)
         easybutton.setOnClickListener{
             intent = Intent(this,prac_group::class.java)
+            intent.putExtra("mode","easy")
             startActivity(intent)
         }
 
         val medbutton = findViewById<Button>(R.id.mediumchap)
         medbutton.setOnClickListener{
             intent = Intent(this,prac_group::class.java)
+            intent.putExtra("mode","medium")
             startActivity(intent)
         }
 
         val hardbutton = findViewById<Button>(R.id.hardchap)
         hardbutton.setOnClickListener{
             intent = Intent(this,prac_group::class.java)
+            intent.putExtra("mode","hard")
             startActivity(intent)
         }
 

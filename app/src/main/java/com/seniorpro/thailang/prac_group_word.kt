@@ -20,14 +20,7 @@ import android.media.AudioRecord
 import cafe.adriel.androidaudioconverter.AndroidAudioConverter;
 import cafe.adriel.androidaudioconverter.callback.IConvertCallback;
 import cafe.adriel.androidaudioconverter.callback.ILoadCallback
-
-//import sun.font.LayoutPathImpl.getPath
-
-
-//import cafe.adriel.androidaudioconverter.model.AudioFormat;
-
-
-val SAMPLE_RATE = 44100
+import android.media.AudioManager
 
 
 
@@ -38,10 +31,7 @@ class prac_group_word : AppCompatActivity() {
     var AudioSavePathInDevice: String? = null
     var AudioSavePathInDevice_mp3: String? = null
     var mediaRecorder: MediaRecorder? = null
-    var mediaPlayer: MediaPlayer? = null
     var words: String = ""
-    //var mediaRecorder: AudioRecord? = null
-    //var mContext: Context = this
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,7 +58,7 @@ class prac_group_word : AppCompatActivity() {
             }
         })
 
-        words = idWord + "_male"
+        words = idWord + "_female"
         thai.setText(thaiWord)
         eng.setText(word)
 
@@ -82,13 +72,17 @@ class prac_group_word : AppCompatActivity() {
         Log.d("information", AudioSavePathInDevice.toString())
 
         //val res: Resources = mContext.resources
-        val soundId = resources.getIdentifier(words, "raw", this.packageName)
-        Log.d("soundId",soundId.toString())
+        //val soundId = resources.getIdentifier(words, "raw", this.packageName)
+        //Log.d("soundId",soundId.toString())
 
-        master =  MediaPlayer.create(this,soundId)
+        //master =  MediaPlayer.create(this,soundId)
+        val player = MediaPlayer()
+        player.setAudioStreamType(AudioManager.STREAM_MUSIC)
+        player.setDataSource("http://ec2-35-163-238-165.us-west-2.compute.amazonaws.com/wavMaster/"+words+".wav")
+        player.prepare()
 
         playBtn.setOnClickListener {
-            master!!.start()
+            player.start()
         }
 
         recordBtn.setOnClickListener{
@@ -178,9 +172,7 @@ class prac_group_word : AppCompatActivity() {
 
     fun MediaRecorderReady() {
         mediaRecorder = MediaRecorder()
-        val bufferSize = AudioRecord.getMinBufferSize(SAMPLE_RATE.toInt(),
-                AudioFormat.CHANNEL_IN_MONO,
-                AudioFormat.ENCODING_PCM_16BIT)
+
 
        /* mediaRecorder = AudioRecord(MediaRecorder.AudioSource.DEFAULT,
                 44100,
@@ -222,6 +214,7 @@ class prac_group_word : AppCompatActivity() {
             Log.d("onPostExecute","Send data to server...")
 
             if (result == "") {
+                Log.d("Network",result)
                 resultText.text = "Network Error";
             }
             else if(result == "-1"){

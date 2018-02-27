@@ -51,18 +51,25 @@
             android:textSize="18sp"
             android:gravity="center_vertical"
             android:textColor="#584044"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/radio_male"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textColor="#584044"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton
+                android:id="@+id/radio_famale"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="Famale"
+                android:textColor="#584044"
+                android:onClick="onRadioButtonClicked"/>
 
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:text="Male"
-            android:textColor="#584044"/>
-        <RadioButton
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:text="Famale"
-            android:textColor="#584044"/>
+        </RadioGroup>
 
     </LinearLayout>
 
