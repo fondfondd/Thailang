@@ -24,8 +24,25 @@ import android.widget.Toast
 import android.support.v4.app.ActivityCompat
 import kotlinx.android.synthetic.main.activity_prac_group.*
 
-private  var idWord = arrayListOf<String>("ga1", "sorry", "maipenrai","goodbye","thankyou")
-private var thaiNames = arrayListOf<String>("กา", "ขอโทษ", "ไม่เป็นไร","ลาก่อน","ขอบคุณ")
+private  var idWord = arrayListOf<String>()
+private var thaiNames = arrayListOf<String>()
+private var names = arrayListOf<String>()
+
+
+private  val idWord_easy = arrayListOf<String>("eat", "speak", "want", "love", "beautiful")
+private val thaiNames_easy = arrayListOf<String>("กิน", "พูด", "อยาก", "รัก", "สวย")
+private val names_easy = arrayListOf<String>("eat", "speak", "want", "love", "beautiful")
+
+
+private  val idWord_medium = arrayListOf<String>("thankyou", "sorry", "nevermind", "hello")
+private val thaiNames_medium = arrayListOf<String>("ขอบคุณ", "ขอโทษ", "ไม่เป็นไร", "สวัสดี")
+private val names_medium = arrayListOf<String>("Thank you", "Sorry", "Never mind", "Hello")
+
+
+private  val idWord_hard = arrayListOf<String>("luggage","policestation")
+private val thaiNames_hard = arrayListOf<String>("กระเป๋าเดินทาง", "สถานีตำรวจ")
+private val names_hard = arrayListOf<String>("luggage","police station")
+
 
 class prac_group : AppCompatActivity() {
 
@@ -33,6 +50,27 @@ class prac_group : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_prac_group)
+
+        idWord = arrayListOf<String>()
+        thaiNames = arrayListOf<String>()
+        names = arrayListOf<String>()
+
+        val extras = intent.extras
+        val mode = extras.getString("mode")
+        if(mode.equals("easy")){
+            idWord = idWord_easy
+            thaiNames = thaiNames_easy
+            names = names_easy
+        }else if(mode.equals("medium")){
+            idWord = idWord_medium
+            thaiNames = thaiNames_medium
+            names = names_medium
+
+        }else if(mode.equals("hard")){
+            idWord = idWord_hard
+            thaiNames = thaiNames_hard
+            names = names_hard
+        }
 
         main_listview.adapter = MyCustomAdapter(this)
 
@@ -95,7 +133,6 @@ class prac_group : AppCompatActivity() {
 
     private class MyCustomAdapter(context: Context): BaseAdapter(){
         private val mContext: Context
-        private val names = arrayListOf<String>("ga", "Sorry", "You're welcome","Goodbye","Thank you")
 
 
         init {

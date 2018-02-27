@@ -12,18 +12,6 @@ class Search_main : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search_main)
 
-//        val s_Word1 = findViewById<Button>(R.id.searchWord1)
-//        s_Word1.setOnClickListener{
-//            intent = Intent(this,prac_group_word::class.java)
-//            startActivity(intent)
-//        }
-//
-//        val s_Word2 = findViewById<Button>(R.id.searchWord2)
-//        s_Word2.setOnClickListener{
-//            intent = Intent(this,prac_group_word::class.java)
-//            startActivity(intent)
-//        }
-
         val HomeButton = findViewById<Button>(R.id.homeBt)
         HomeButton.setOnClickListener{
             intent = Intent(this,MainActivity::class.java)
