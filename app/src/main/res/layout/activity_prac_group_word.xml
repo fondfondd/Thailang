@@ -154,7 +154,7 @@
             android:background="@drawable/border_trans"
             android:gravity="center"
             android:text="Result"
-            android:textStyle="bold"
+            android:textStyle="b"
             android:textColor="#584044"
             android:textSize="15sp" />
 

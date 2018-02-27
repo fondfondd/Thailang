@@ -21,13 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Learn_main" />
-        <activity android:name=".Prac_main" />
-        <activity android:name=".Test_main" />
-        <activity android:name=".learn_vocab" />
+
         <activity android:name=".prac_group" />
         <activity android:name=".prac_group_word" />
-        <activity android:name=".test_chapter" />
         <activity android:name=".Search_main" />
         <activity android:name=".Favor_main" />
         <activity android:name=".History_main" />
