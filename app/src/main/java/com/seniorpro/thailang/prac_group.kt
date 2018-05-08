@@ -29,18 +29,18 @@ private var thaiNames = arrayListOf<String>()
 private var names = arrayListOf<String>()
 
 
-private  val idWord_easy = arrayListOf<String>("eat", "speak", "want", "love", "beautiful")
-private val thaiNames_easy = arrayListOf<String>("กิน", "พูด", "อยาก", "รัก", "สวย")
-private val names_easy = arrayListOf<String>("eat", "speak", "want", "love", "beautiful")
+private  val idWord_easy = arrayListOf<String>("eat", "speak", "want", "love", "beautiful", "white")
+private val thaiNames_easy = arrayListOf<String>("kin", "pʰûːt", "jàːk", "rák", "sǔaj", "kʰǎːw")
+private val names_easy = arrayListOf<String>("eat", "speak", "want", "love", "beautiful", "white")
 
 
 private  val idWord_medium = arrayListOf<String>("thankyou", "sorry", "nevermind", "hello")
-private val thaiNames_medium = arrayListOf<String>("ขอบคุณ", "ขอโทษ", "ไม่เป็นไร", "สวัสดี")
+private val thaiNames_medium = arrayListOf<String>("kʰɔ̀ːp kʰun", "kʰɔ̌ː tʰôːt", "mâj pen raj", "sà wàt diː")
 private val names_medium = arrayListOf<String>("Thank you", "Sorry", "Never mind", "Hello")
 
 
 private  val idWord_hard = arrayListOf<String>("luggage","policestation")
-private val thaiNames_hard = arrayListOf<String>("กระเป๋าเดินทาง", "สถานีตำรวจ")
+private val thaiNames_hard = arrayListOf<String>("kràʔ pǎw dɤːn tʰaːŋ", "sà tʰǎː niː tam rùːat")
 private val names_hard = arrayListOf<String>("luggage","police station")
 
 
@@ -95,29 +95,6 @@ class prac_group : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val SearchButton = findViewById<Button>(R.id.searchBt)
-        SearchButton.setOnClickListener{
-            intent = Intent(this,Search_main::class.java)
-            startActivity(intent)
-        }
-
-        val FavButton = findViewById<Button>(R.id.favBt)
-        FavButton.setOnClickListener{
-            intent = Intent(this,Favor_main::class.java)
-            startActivity(intent)
-        }
-
-        val HistoryButton = findViewById<Button>(R.id.histrBt)
-        HistoryButton.setOnClickListener{
-            intent = Intent(this,History_main::class.java)
-            startActivity(intent)
-        }
-
-        val SettingButton = findViewById<Button>(R.id.settBt)
-        SettingButton.setOnClickListener{
-            intent = Intent(this,Setting_main::class.java)
-            startActivity(intent)
-        }
 
         val toolbar = findViewById<Toolbar>(R.id.toolBar)
         setSupportActionBar(toolbar)
@@ -156,12 +133,12 @@ class prac_group : AppCompatActivity() {
             /*val textView = TextView(mContext)
             textView.text = "Show the message"
             return textView*/
-            val greyColor = Color.parseColor("#D7D5D2")
+            val greyColor = Color.parseColor("#CABDBA")
             val rowMain: View
             if(convertView == null){
                 val layoutInflator = LayoutInflater.from(viewGroup!!.context)
                 rowMain = layoutInflator.inflate(R.layout.row_main,viewGroup,false) //input sub layout
-                val viewHolder = ViewHolder(rowMain.name_textview,rowMain.position_textview,rowMain.imageView)
+                val viewHolder = ViewHolder(rowMain.name_textview,rowMain.position_textview)
                 rowMain.tag = viewHolder
             }else{
                 rowMain = convertView
@@ -197,7 +174,7 @@ class prac_group : AppCompatActivity() {
             return rowMain
 
         }
-        private class ViewHolder(val nameTextView: TextView, val positionTextView: TextView, val rowImageView: ImageView)
+        private class ViewHolder(val nameTextView: TextView, val positionTextView: TextView)
     }
 
 

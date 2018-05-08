@@ -23,11 +23,10 @@ import cafe.adriel.androidaudioconverter.AndroidAudioConverter;
 import cafe.adriel.androidaudioconverter.callback.IConvertCallback;
 import cafe.adriel.androidaudioconverter.callback.ILoadCallback
 import android.media.AudioManager
-
+import android.support.v7.widget.Toolbar
 
 
 private var outputFile: String? = null
-private var gender = "_male"
 
 
 class prac_group_word : AppCompatActivity() {
@@ -55,29 +54,11 @@ class prac_group_word : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val SearchButton = findViewById<Button>(R.id.searchBt)
-        SearchButton.setOnClickListener{
-            intent = Intent(this,Search_main::class.java)
-            startActivity(intent)
-        }
 
-        val FavButton = findViewById<Button>(R.id.favBt)
-        FavButton.setOnClickListener{
-            intent = Intent(this,Favor_main::class.java)
-            startActivity(intent)
-        }
-
-        val HistoryButton = findViewById<Button>(R.id.histrBt)
-        HistoryButton.setOnClickListener{
-            intent = Intent(this,History_main::class.java)
-            startActivity(intent)
-        }
-
-        val SettingButton = findViewById<Button>(R.id.settBt)
-        SettingButton.setOnClickListener{
-            intent = Intent(this,Setting_main::class.java)
-            startActivity(intent)
-        }
+        val toolbar = findViewById<Toolbar>(R.id.toolBar)
+        setSupportActionBar(toolbar)
+        supportActionBar!!.setDisplayShowTitleEnabled(false)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         AndroidAudioConverter.load(this, object : ILoadCallback {
             override fun onSuccess() {
@@ -92,15 +73,14 @@ class prac_group_word : AppCompatActivity() {
             }
         })
 
-        Log.d("gender_____", gender)
-        words = idWord + gender
+        words = idWord
         thai.setText(thaiWord)
         eng.setText(word)
 
         Log.d("word",words)
 
         webView_1.settings.javaScriptEnabled = true
-        webView_1.loadUrl("http://ec2-35-163-238-165.us-west-2.compute.amazonaws.com/simple1.php?w="+words)
+        webView_1.loadUrl("http://ec2-35-161-84-87.us-west-2.compute.amazonaws.com/simple1.php?w="+words)
 
         AudioSavePathInDevice = Environment.getExternalStorageDirectory().absolutePath + "/recording.wav"
         AudioSavePathInDevice_mp3 = Environment.getExternalStorageDirectory().absolutePath + "/recording.wav"
@@ -113,7 +93,7 @@ class prac_group_word : AppCompatActivity() {
         //master =  MediaPlayer.create(this,soundId)
         val player = MediaPlayer()
         player.setAudioStreamType(AudioManager.STREAM_MUSIC)
-        player.setDataSource("http://ec2-35-163-238-165.us-west-2.compute.amazonaws.com/wavMaster/"+words+".wav")
+        player.setDataSource("http://ec2-35-161-84-87.us-west-2.compute.amazonaws.com/wavMaster/"+words+"_female.wav")
         player.prepare()
 
         playBtn.setOnClickListener {
@@ -141,9 +121,6 @@ class prac_group_word : AppCompatActivity() {
         }*/
     }
 
-    fun setterGender(gen: String){
-        gender = gen
-    }
 
     fun convertAudio() {
         /**
@@ -243,7 +220,7 @@ class prac_group_word : AppCompatActivity() {
             Result = doFileUpload()
             Result2 = praat()
 
-
+            Log.d("onPostExecute","do in background...")
             return Result2
 
         }
@@ -252,17 +229,18 @@ class prac_group_word : AppCompatActivity() {
             super.onPostExecute(result)
             Log.d("onPostExecute","Send data to server...")
 
-            if (result == "") {
+            if (result == "-1") {
                 Log.d("Network",result)
                 resultText.text = "Network Error";
             }
-            else if(result == "-1"){
+            else if(result == ""){
                 percen.text = "Too short!"
                 Toast.makeText(this@prac_group_word,"Please make long voice.",Toast.LENGTH_LONG).show()
             }
             else {
                 percen.text = result
-                webView_1.loadUrl("http://ec2-35-163-238-165.us-west-2.compute.amazonaws.com/simple_praat.php?w="+words)
+                webView_1.loadUrl("http://ec2-35-161-84-87.us-west-2.compute.amazonaws.com/simple_praat.php?w="+words)
+                Log.d("onPostExecute","Show web view...")
             }
         }
     }
@@ -305,7 +283,7 @@ class prac_group_word : AppCompatActivity() {
         val buffer: ByteArray
         val maxBufferSize = 1 * 1024 * 1024
         val responseFromServer = ""
-        val urlString = "http://ec2-35-163-238-165.us-west-2.compute.amazonaws.com/uploads.php"
+        val urlString = "http://ec2-35-161-84-87.us-west-2.compute.amazonaws.com/uploads.php"
 
         try {
 
@@ -381,7 +359,7 @@ class prac_group_word : AppCompatActivity() {
 
     private fun praat() : String{
 
-        val API_URL = "http://ec2-35-163-238-165.us-west-2.compute.amazonaws.com/normalize_praat.php?w="+words
+        val API_URL = "http://ec2-35-161-84-87.us-west-2.compute.amazonaws.com/compare_voice.php?w="+words
         var Result = ""
         try {
 

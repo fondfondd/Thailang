@@ -102,40 +102,35 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="1" />
+                android:gravity="center" />
 
             <TextView
                 android:id="@+id/tone2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="2" />
+                android:gravity="center" />
 
             <TextView
                 android:id="@+id/tone3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="3" />
+                android:gravity="center" />
 
             <TextView
                 android:id="@+id/tone4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="4" />
+                android:gravity="center" />
 
             <TextView
                 android:id="@+id/tone5"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="5" />
+                android:gravity="center" />
 
             <ImageButton
                 android:id="@+id/recordBtn"
@@ -218,45 +213,6 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/home" />
 
-            <TextView
-                android:layout_width="40dp"
-                android:layout_height="match_parent" />
-
-            <Button
-                android:id="@+id/searchBt"
-                android:layout_width="35dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/search" />
-
-            <TextView
-                android:layout_width="40dp"
-                android:layout_height="match_parent" />
-
-            <Button
-                android:id="@+id/favBt"
-                android:layout_width="35dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/fav" />
-
-            <TextView
-                android:layout_width="40dp"
-                android:layout_height="match_parent" />
-
-            <Button
-                android:id="@+id/histrBt"
-                android:layout_width="35dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/history" />
-
-            <TextView
-                android:layout_width="40dp"
-                android:layout_height="match_parent" />
-
-            <Button
-                android:id="@+id/settBt"
-                android:layout_width="35dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/settings" />
         </LinearLayout>
     </LinearLayout>
 

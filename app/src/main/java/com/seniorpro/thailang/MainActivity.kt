@@ -56,30 +56,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val SearchButton = findViewById<Button>(R.id.searchBt)
-        SearchButton.setOnClickListener{
-            intent = Intent(this,Search_main::class.java)
-            startActivity(intent)
-        }
-
-        val FavButton = findViewById<Button>(R.id.favBt)
-        FavButton.setOnClickListener{
-            intent = Intent(this,Favor_main::class.java)
-            startActivity(intent)
-        }
-
-        val HistoryButton = findViewById<Button>(R.id.histrBt)
-        HistoryButton.setOnClickListener{
-            intent = Intent(this,History_main::class.java)
-            startActivity(intent)
-        }
-
-        val SettingButton = findViewById<Button>(R.id.settBt)
-        SettingButton.setOnClickListener{
-            intent = Intent(this,Setting_main::class.java)
-            startActivity(intent)
-        }
-
 //        supportActionBar!!.setDisplayShowTitleEnabled(false)
 
 

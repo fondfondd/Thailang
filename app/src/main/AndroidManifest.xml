@@ -23,11 +23,7 @@
         </activity>
 
         <activity android:name=".prac_group" />
-        <activity android:name=".prac_group_word" />
-        <activity android:name=".Search_main" />
-        <activity android:name=".Favor_main" />
-        <activity android:name=".History_main" />
-        <activity android:name=".Setting_main"></activity>
+        <activity android:name=".prac_group_word"></activity>
     </application>
 
 </manifest>
